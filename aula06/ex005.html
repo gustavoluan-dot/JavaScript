@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio</title>
-
-    <style></style>
+    <title>Document</title>
 </head>
 <body>
     <script>
-        var nome = prompt('Qual e seu nome?')
-        document.writeln(`Ola <strong>${nome}</strong>! Seu nome tem ${nome.length} letras. <br/>`)
-        document.write(`Seu nome em maiuscula é ${nome.toUpperCase()}<br/>`)
-        document.write(`Seu nome em minuscula é ${nome.toLowerCase()}<br/>`)
+        var n1 = Number(prompt('Coloque um numero'))
+        var n2 = Number(prompt('Coloque outro numero'))
+        var s = n1 + n2
+        alert('A soma é ' + s)
+        alert(`A soma de ${n1} com ${n2} é ${s}` )
+
+        var nome = prompt('Coloque seu nome')
+        document.write(`Ola ${nome} <br>`)
+        document.write(`Seu nome tem ${nome.length} <br>`)
+        document.write(`Seu nome em maiusculo: ${nome.toUpperCase()} <br>`)
+        document.write(`Seu nome em minusculo: ${nome.toLowerCase()}`)
+
     </script>
 </body>
 </html>
