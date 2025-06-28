@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <style>
+        body {
+            background-color: lightgray;
+            font-size: 40px;
+            font-family: Arial;
+            
+            margin-top: 200px;
+        }
+    </style>
+    
 </head>
 <body>
     <script>
-        var n1 = Number(prompt('Coloque um numero:'))
-        var n2 = Number(prompt('Coloque outro numero:'))
-        var s = n1 + n2
-        alert(`A soma dos números ${n1} e ${n2} é ${s}`)
+        var n1 = Number(prompt('Put a number here'))
+        var n2 = Number(prompt('Put other number here'))
+        var result = n1 + n2
+        alert(`The result ${n1} and ${n2} is ${result}`)
 
-        var name = prompt('Put your name here:')
-        document.write(`Hi <i><strong>${name},</strong></i> Nice to meet you! <br>`)
-        document.write(`Your name has ${name.length} letters! <br>`)
-        document.write(`Your name in UpperCase ${name.toUpperCase()} <br>`)
-        document.write(`Your name in LowerCase ${name.toLowerCase()}`)
-
-
+        var name = prompt('Put your name here')
+        document.write(`<i><strong>Hello ${name}, how are you?</strong></i> <br>`)
+        document.write(`Your name have ${name.length} letters <br>`)
+        document.write(`Your name in UpperCase is ${name.toUpperCase()} <br>`)
+        document.write(`Your name in LowerCase is ${name.toLowerCase()}`)
     </script>
 </body>
 </html>
