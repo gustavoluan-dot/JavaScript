@@ -6,18 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-   <script>
-       var n1 = Number(prompt('Digite um numero'))
-       var n2 = Number(prompt('Digite outro numero'))
-       var s = n1 + n2
-       alert(`A soma de ${n1} e ${n2} é ${s}`)
-
-       var nome = prompt('Coloque seu nome')
-       alert(`Seu nome é ${nome}`)
-       document.write(`Seu nome tem ${nome.length} letras <br>`)
-       document.write(`Seu nome em maiusculo é ${nome.toUpperCase()} <br>`)
-       document.write(`Seu nome em minusculo é ${nome.toLowerCase()} <br>`)
+    <h1>OLA OLA OLA</h1>
+    <p class="para1">Aprendendo DOM</p>
+    <p>JAJA E TREINAO</p>
+  <div id="divone">Ramelei</div>
+    <script>
+        
+        var p2 = document.getElementById('divone')
+        document.write('O que eu fiz final de semana: ' + p2.innerText)
        
-   </script>
+    </script>
 </body>
 </html>
