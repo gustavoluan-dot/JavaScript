@@ -4,29 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            background-color: lightgray;
-            font-size: 40px;
-            font-family: Arial;
-            
-            margin-top: 200px;
-        }
-    </style>
-    
 </head>
 <body>
     <script>
-        var n1 = Number(prompt('Put a number here'))
-        var n2 = Number(prompt('Put other number here'))
-        var result = n1 + n2
-        alert(`The result ${n1} and ${n2} is ${result}`)
+        var n1 = Number(prompt('Digite um número:'))
+        var n2 = Number(prompt('Digite outro número:'))
+        var s = n1 + n2
+        alert(`O resultado da soma de ${n1} com ${n2} é: ${s}`)
 
-        var name = prompt('Put your name here')
-        document.write(`<i><strong>Hello ${name}, how are you?</strong></i> <br>`)
-        document.write(`Your name have ${name.length} letters <br>`)
-        document.write(`Your name in UpperCase is ${name.toUpperCase()} <br>`)
-        document.write(`Your name in LowerCase is ${name.toLowerCase()}`)
+       var name = prompt('Put your name here:')
+       document.write(`Your name has ${name.length} letters! <br>`)
+       document.write(`Your name in UpperCase: ${name.toUpperCase()} <br>`)
+       document.write(`Your name in LowerCase: ${name.toLowerCase()}`) 
+
     </script>
 </body>
 </html>
+
