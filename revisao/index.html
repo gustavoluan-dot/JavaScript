@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        margin: 0; 
+
+}
+
+        .container {
+            background-color: yellow;
+            color: black;
+            width: 300px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">Interaja comigo aqui</div>
+    <script>
+        var c = document.querySelector('.container')
+        c.addEventListener('click', cliquei)
+        c.addEventListener('mouseenter', entrei)
+        c.addEventListener('mouseout', sai)
+
+        function cliquei() {
+            c.style.background = 'Green'
+            c.style.color = 'White'
+            c.innerHTML = 'Clicou e mudou o fundo para verde'
+            c.style.cursor = 'pointer'
+          
+        }
+
+        function entrei() {
+            c.style.background = 'Purple'
+            c.innerHTML = 'Entrei e mudei para Roxo'
+        }
+        function sai() {
+            c.style.background = 'Yellow'
+            c.style.color = 'Black'
+            c.innerHTML = 'Sai e voltei para a cor de fundo normal'
+        }
+ 
+    </script>
+</body>
+</html>
