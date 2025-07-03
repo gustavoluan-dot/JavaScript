@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Nacionalidade</h1>
+   Data de nascimento: <input type="text" name="nacio" id="nacio">
+   <input type="button" value="Verificar" onclick="check()">
+   <div id="divi">
+    Voce nasceu em:
+   </div>
+   <script>
+        function check() {
+            var p = document.getElementById('nacio')
+            var d = document.getElementById('divi')
+            var p1 = String(p.value)
+            d.innerHTML = `Voce nasceu em: ${p1}`
+            if (p1 == 'Brasil') {
+                d.innerHTML += `<p>Somos brasileiros</p>`
+            } else {
+                d.innerHTML += `<p>Voce e estrangeiro</p>`
+            }
+        }
+   </script>
+</body>
+</html>

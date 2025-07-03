@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Somando números</h1>
+    <input type="number" name="n1" id="n1"> +
+    <input type="number" name="n1a" id="n1a"> 
+    <input type="button" value="check" onclick="checar()">
+    <div>A sua resposta é:</div>
+    <script>
+        function checar() {
+            var number = document.getElementById('n1')
+            var number2 = document.getElementById('n1a')
+            var answer = document.getElementsByTagName('div') [0]
+            var num1 = Number(number.value)
+            var num = Number(number2.value)
+            var soma = num1 + num
+            answer.innerHTML = `A sua soma de ${num1} com ${num} é <strong>${soma}</strong>`
+        }
+    </script>
+</body>
+</html>
