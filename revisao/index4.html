@@ -6,24 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-   <h1>Nacionalidade</h1>
-   Data de nascimento: <input type="text" name="nacio" id="nacio">
-   <input type="button" value="Verificar" onclick="check()">
-   <div id="divi">
-    Voce nasceu em:
-   </div>
-   <script>
+    <input type="text" id="texto">
+    <input type="button" value="Olhar" onclick="check()">
+    <div id="divi">
+        Vc nasceu em:
+    </div>
+    <script>
         function check() {
-            var p = document.getElementById('nacio')
+            var t = document.getElementById('texto')
             var d = document.getElementById('divi')
-            var p1 = String(p.value)
-            d.innerHTML = `Voce nasceu em: ${p1}`
-            if (p1 == 'Brasil') {
-                d.innerHTML += `<p>Somos brasileiros</p>`
+            var tt = String(t.value)
+            d.innerHTML = `Voce nasceu em: ${tt}`
+            if (tt == 'Brasil') {
+                d.innerHTML += '<p>Voce e brasileiro'
+            } else if ( tt == 'Argentina') {
+                d.innerHTML += '<p> Voce e argentino'
             } else {
-                d.innerHTML += `<p>Voce e estrangeiro</p>`
+                d.innerHTML += '<p> Vc e gringo!'
             }
         }
-   </script>
+    </script>
 </body>
 </html>

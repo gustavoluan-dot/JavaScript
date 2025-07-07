@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Desafio</title>
+    <style>
+        *{
+            font-family: 'Arial';
+        }
+    </style>
 </head>
 <body>
-    <h1>Somando números</h1>
-    <input type="number" name="n1" id="n1"> +
-    <input type="number" name="n1a" id="n1a"> 
-    <input type="button" value="check" onclick="checar()">
-    <div>A sua resposta é:</div>
+    <h1>Nacionalidade</h1>
+    Coloque aqui a onde você nasceu: <input type="text" name="nacio" id="nacio">
+    <input type="button" value="Receber" onclick="check()">
+    <div>Você nasceu em:</div>
     <script>
-        function checar() {
-            var number = document.getElementById('n1')
-            var number2 = document.getElementById('n1a')
-            var answer = document.getElementsByTagName('div') [0]
-            var num1 = Number(number.value)
-            var num = Number(number2.value)
-            var soma = num1 + num
-            answer.innerHTML = `A sua soma de ${num1} com ${num} é <strong>${soma}</strong>`
+        function check() {
+            var paragrafo = document.getElementById('nacio')
+            var divi = document.getElementsByTagName('div') [0]
+            var paragrafotransformado = String(paragrafo.value)
+            divi.innerHTML = `Você nasceu: ${paragrafotransformado}`
+            if (paragrafotransformado === 'Brasil') {
+                divi.innerHTML += `<p> <strong> Você é Brasileiro igual a mim!`
+            } else {
+                divi.innerHTML += `<p> <strong> Você é Estrangeiro!`
+            }
         }
     </script>
+
 </body>
 </html>
