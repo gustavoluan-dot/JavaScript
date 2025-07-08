@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: red;
+        }
+        #foto {
+            background-color: lightgray;
+            margin: 0 auto;
+            width: 600px;
+
+            
+        }
+        #manha {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 100%;
+
+            display: none;
+            
+        }
+        #tarde {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 100%;
+                display: none;
+        }
+        #noite {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 100%;
+                display: none;
+        }
+        #madrugada {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 100%;
+                display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="msg">
+        A mensagem vai aparecer aqui
+        <input type="button" value="Verificar" onclick="check()">
+    </div>
+    
+    <div id="foto">
+        <img src="modelo/imagens/de-manha.png" alt="" id="manha">
+        <img src="modelo/imagens/tarde-att2.png" alt="" id="tarde">
+        <img src="modelo/imagens/noite-att2.png" alt="" id="noite">
+        <img src="modelo/imagens/madrugada.png" alt="" id="madrugada">
+    </div>
+</body>
+
+<script src="script2.js"></script>
+</html>
