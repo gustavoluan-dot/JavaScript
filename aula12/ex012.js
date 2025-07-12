@@ -1,12 +1,13 @@
-var agora = new Date()
-var time = agora.getHours()
-console.log(`Agora e extamente ${time} horas.`)
-if (time > 0 && time < 6)
-    console.log('Boa madrugada!')
-else if (time >= 6 && time < 12) {
-    console.log('Bom dia!')
-} else if (time <= 18) {
-    console.log('Boa tarde!')
+var now = new Date
+var nowatt =  now.getHours()
+
+if (nowatt > 6 && nowatt < 12) {
+    console.log('Bom Dia!')
+} else if (nowatt >= 12 && nowatt < 18) {
+    console.log('Boa Tarde!')
+} else if (nowatt >= 18 || nowatt < 0) {
+    console.log('Boa Noite!')
 } else {
-    console.log('Boa noite!')
+    console.log('Boa Madrugada!')
 }
+

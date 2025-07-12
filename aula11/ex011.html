@@ -1,33 +1,30 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio</title>
-    <style>
-        *{
-            font-family: 'Arial';
-        }
-    </style>
+    <title>Document</title>
 </head>
 <body>
-    <h1>Nacionalidade</h1>
-    Coloque aqui a onde você nasceu: <input type="text" name="nacio" id="nacio">
-    <input type="button" value="Receber" onclick="check()">
-    <div>Você nasceu em:</div>
+    <input type="text" id="nacio" autocomplete="off">
+    <input type="button" value="Verificar" onclick="check()">
+    <div id="answer">
+        A resposta é:
+    </div>
     <script>
         function check() {
-            var paragrafo = document.getElementById('nacio')
-            var divi = document.getElementsByTagName('div') [0]
-            var paragrafotransformado = String(paragrafo.value)
-            divi.innerHTML = `Você nasceu: ${paragrafotransformado}`
-            if (paragrafotransformado === 'Brasil') {
-                divi.innerHTML += `<p> <strong> Você é Brasileiro igual a mim!`
+            var p = document.getElementById('nacio')
+            var d = document.getElementById('answer')
+            var pt = String(p.value)
+            d.innerHTML = `Você nasceu em: <strong>${pt}</strong>`
+            if (pt == 'Brasil') {
+                d.innerHTML += '<p><strong>Você é Brasileiro assim como eu!</strong></p>'
+            } else if (pt== 'Argentina') {
+                d.innerHTML += '<p><strong>Você é Argentino, gosto de você por causa do MESSI</strong></p>'
             } else {
-                divi.innerHTML += `<p> <strong> Você é Estrangeiro!`
+                d.innerHTML += '<p><strong>Você é Estrangeiro!</strong></p>'
             }
         }
     </script>
-
 </body>
 </html>
