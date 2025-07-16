@@ -1,41 +1,17 @@
-var time = new Date()
-var hour = time.getHours()
-var d = document.getElementById('msg')
+function carregar() {
+    var msg = document.getElementById('msg')
+    var img = document.getElementById('imagens')
+    var data = new Date
+    var hora = data.getHours()
+    if (hora >= 6 && hora < 12) {
+        img.src = 'imagens/manha.jpg'
+        msg.innerHTML += '<P> Bom Dia!'
+    } else if (hora >= 12 && hora < 18) {
+        img.src = 'imagens/tarde.jpg'
+        msg.innerHTML += '<p> Boa Tarde!'
 
-
-var morning = document.getElementById('manha')
-var afternoon = document.getElementById('tarde')
-var evening = document.getElementById('noite')
-var dawn = document.getElementById('madrugada')
-
-function check() {
-
- d.innerHTML = `Agora é: ${hour} horas. `
- 
-if (hour > 6 && hour < 12) {
-    d.innerHTML += '<strong>Agora é de manha!'
-    morning.style.display = 'block'
-    afternoon.style.display = 'none'
-    evening.style.display = 'none'
-    
-} else if (hour >= 12 && hour < 18) {
-    d.innerHTML +=  '<strong>Agora é de tarde!'
-    afternoon.style.display = 'block'
-    evening.style.display = 'none'
-    morning.style.display = 'none'
-    
-    
-} else if (hour >= 18 || hour < 0) {
-    d.innerHTML += '<strong>Noite!'
-    evening.style.display = 'block'
-    afternoon.style.display = 'none'
-    morning.style.display = 'none'
-}
-    else {
-        d.innerHTML += '<strong>Boa Madrugada!'
-        evening.style.display = 'none'
-        afternoon.style.display = 'none'
-        morning.style.display = 'none'
-        dawn.style.display = 'block'
-    }
+    } else {
+        msg.innerHTML += '<P> Boa Noite!'
+        img.src = 'imagens/noite.jpg'
+    } 
 }

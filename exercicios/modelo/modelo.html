@@ -3,35 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/stylesheet.css">
-    <title>Hora do Dia</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <title>Hora do Dia!</title>
 </head>
-<body>
-
+<body onload="carregar()">
     <header>
         <h1>Hora do dia</h1>
     </header>
-
-    <section>
-
+<section>
+    
         <div id="msg">
-            Aqui vai aparecer a mensagem...
-            <input type="button" value="Verificar" onclick="check()" id="botao">
+            A mensagem vai aparecer aqui
         </div>
-
-        <div id="foto">
-           
-            <img src="../imagens/de-manha.png" alt="foto do dia" id="manha">
-            <img src="../imagens/tarde-att2.png" alt="foto de tarde" id="tarde">
-            <img src="../imagens/noite-att2.png" alt="foto de noite" id="noite">
-            <img src="../imagens/madrugada.png" alt="foto de madrugada" id="madrugada">
+    
+        <div>
+            <img src="imagens/manha.jpg" alt="de-manha" id="imagens">
         </div>
+</section>
 
-    </section>
-
-    <footer>
-        <p><i>&copy; CursoemVídeo</i></p>
-    </footer>
-    <script src="script.js"></script>
+<footer>&copy;Gustavo</footer>
+<script src="script.js"></script>
 </body>
 </html>
