@@ -313,6 +313,7 @@ function check() {
        }
 
          msg.appendChild(img)
+        
     }
 
    
