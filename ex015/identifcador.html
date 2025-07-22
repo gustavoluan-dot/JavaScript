@@ -1,50 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, 
-    initial-scale=1.0">
-    <link rel="stylesheet" href="estilos/stylesheet.css">
-    <title>Verificador de Idade</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="style.css">
+  <title>Verificador de Idade</title>
 </head>
 <body>
-    <header>
-        <h1>Título</h1>
-    </header>
-    <section>
 
-        <div>
+   <header>
+        <h1>Verificador de Idade</h1>
+   </header>
 
-          <p>Ano de Nascimento:
-            <input type="number" name="txtano" id="txtano">
-          </p>
+   <section>
 
-          <p>Sexo:
+    <div>
+        <p>Ano de Nascimento: <input type="number" name="number" id="number"></p>
 
-            <input type="radio" name="txtsexo" id="mas">
-            <label for="mas">Masculino</label>
+        <p>Sexo:
+              <input type="radio" name="sexo" id="txtm"> <label for="txtm">Masculino</label>
+              <input type="radio" name="sexo" id="txtf"> <label for="txtf">Feminino</label>
 
-            <input type="radio" name="txtsexo" id="fem">
-            <label for="fem">Feminino</label>
-          </p>
+            <p>
+                <input type="button" value="Verificar" onclick="check()">
+              </p> 
+        </p>
+    </div>
 
-         <!-- <p> Etnia:
-                <input type="radio" name="txtcor" id="ne">
-                <label for="ne">Negro</label>
+    <div id="msg">
+       
+    </div>
+   </section>
 
-                <input type="radio" name="txtcor" id="bra">
-                <label for="bra">Branco</label> -->
-          </p>
-
-          <p><input type="button" value="Verificar" onclick="check()"></p>
-        </div>
-        <div id="msg">
-            Preencha os dados acima para ver o resultado..
-        </div>
-    </section>
-    <footer>
-        <p>&copy; Gustavo Luan</p>
-    </footer>
-    <script src="teste.js"></script>
 </body>
-</html> 
+    <script src="script.js"></script>
+</html>

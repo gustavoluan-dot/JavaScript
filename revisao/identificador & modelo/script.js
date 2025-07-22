@@ -1,13 +1,15 @@
 
-
 function check() {
     var data = new Date()
     var ano = data.getFullYear()
     var anoEscolhido = document.getElementById('number')
     var msg = document.getElementById('msg')
 
+    msg.innerHTML = ''
+
     if (anoEscolhido.value.length == 0 || Number(anoEscolhido.value) >= ano) {
-        alert('ERRO!')
+        msg.style.textAlign = 'center'
+        msg.innerHTML = '<p style="color: red;"><strong>ERRO! Por favor, digite um ano de nascimento válido (passado e não vazio).</strong></p>'
 
     } else {
        var sexo = document.getElementsByName('sexo')
