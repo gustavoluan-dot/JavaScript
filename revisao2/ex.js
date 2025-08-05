@@ -1,41 +1,21 @@
 function check() {
-    let inicio = document.getElementById('txtn')
-    let fim = document.getElementById('txtf')
-    let passo = document.getElementById('txtp')
-    let msg = document.getElementById('msg')
+    let number = document.getElementById('p1')
+    let table = document.getElementById('p2')
 
-    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
-        alert('PREENCHA TODOS OS CAMPOS PARA QUE POSSA SER FEITO O CÁLCULO')
+    if (number.value.length == 0) {
+        alert('ERRO, DIGITE ALGUM NUMERO PARA QUE POSSA SER FEITO A TABUADA!')
     } else {
-       let i = Number(inicio.value)
-       let f = Number(fim.value)
-       let p = Number(passo.value)
-     
-        if (p <= 0) {
-            alert('INVÁLIDO, CONSIDERANDO PASSO 1')
-            p = 1
+        let n = Number(number.value)
+        table.innerHTML = ''
+        for (let c = 1; c <= 10; c++) {
+            let item = document.createElement('option')
+            item.text = `${n} x ${c} = ${n*c}`
+            table.appendChild(item)
         }
-
-      if (i <= f) {
-        msg.innerHTML = 'Contando: <br>'
-        for (let s = i; s <= f; s += p) {
-            msg.innerHTML += ` ${s} `
-        }
-      }
-
-      else if (i >= f) {
-        msg.innerHTML = 'Contando: <br>'
-        for (let n = i; n >= f; n -= p) {
-            msg.innerHTML +=  ` ${n} `
-        }
-      }
+    }
 }
 
-}
-
-function reset() {
-    let inicio = document.getElementById('txtn').value = ''
-    let fim = document.getElementById('txtf').value = ''
-    let passo = document.getElementById('txtp').value = ''
-    let msg = document.getElementById('msg').innerHTML = ''
+function clean() {
+     let number = document.getElementById('p1').value = ''
+    let table = document.getElementById('p2').innerHTML =''
 }
