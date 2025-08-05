@@ -1,14 +1,22 @@
-function gerarTabuada() {
-  const numero = document.getElementById("numero").value;
-  const resultado = document.getElementById("resultado");
-  resultado.innerHTML = ""; // limpa o conteúdo anterior
+function tabuada() {
+    let num = document.getElementById('txtn')
+    let tabuada = document.getElementById('txtt')
 
-  if (numero === "") {
-    resultado.innerHTML = "<p>Por favor, digite um número.</p>";
-    return;
-  }
+    if (num.value.length == 0) {
+      alert('POR FAVOR DIGITE UM NÚMERO')
+    } 
+    else {
+      let n = Number(num.value)
+      let c = 1
+      tabuada.innerHTML = ''
 
-  for (let i = 1; i <= 10; i++) {
-    resultado.innerHTML += `<p>${numero} x ${i} = ${numero * i}</p>`;
-  }
+      while (c <= 10) {
+        let item = document.createElement('option')
+        item.text = `${n} x ${c} = ${n*c}`
+        item.value = `tabuada${c}`
+        tabuada.appendChild(item)
+        c++
+      }
+    }
+
 }
