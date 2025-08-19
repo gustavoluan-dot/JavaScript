@@ -11,6 +11,7 @@ function check() {
 
     if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0 ) {
         msg.innerHTML = 'PREENCHA TODOS OS CAMPOS PARA QUE POSSA SER FEITO O CÁLCULO!'
+        return
     } else {
         msg.innerHTML = 'Contando: <br>'
 
@@ -23,13 +24,13 @@ function check() {
             p = 1 
         }
 
-        if (i <= f) {
+        if (i <= f) {  // ordem crescente
             for (let c = i; c <= f; c += p) {
             msg.innerHTML += ` 👉 ${c} `
             }
         }
         
-        if (i >= f) {
+        if (i >= f) {  // ordem decrescente
             for (let c = i; c >=f; c-= p ) {
                 msg.innerHTML += ` 👉 ${c} `
             }
